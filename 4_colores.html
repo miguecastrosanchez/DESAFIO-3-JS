@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT 3</title>
+</head>
+<body>
+    <div id="div1" style="width: 200px; height: 200px; background-color: blue;"></div>
+    <div id="div2" style="width: 200px; height: 200px; background-color: red;"></div>
+    <div id="div3" style="width: 200px; height: 200px; background-color: greenyellow;"></div>
+    <div id="div4" style="width: 200px; height: 200px; background-color: yellow;"></div>
+    
+    <div id="key" style="width: 200px; height: 200px; border: 2px solid black;"></div>
+
+    <div id="div_creado"></div>
+
+    <script>
+
+    
+    //PUNTO 3.1 Y 3.2    
+
+    function black_div(event){
+            
+            let div = event.target;
+            div.style.backgroundColor = 'black';
+        }
+
+        let div_click1 = document.getElementById('div1')
+        div_click1.addEventListener("click",black_div)
+
+        let div_click2 = document.getElementById('div2')
+        div_click2.addEventListener("click",black_div)
+
+        let div_click3 = document.getElementById('div3')
+        div_click3.addEventListener("click",black_div)
+
+        let div_click4 = document.getElementById('div4')
+        div_click4.addEventListener("click",black_div)
+
+
+    //PUNTO 3.3 Y 3.4  
+        
+        function color_tecla(event){
+
+            let tecla = event.key;
+            if(tecla == "a"){
+                let divtecla = document.getElementById('key');
+                divtecla.style.backgroundColor = 'pink'
+            }
+            if(tecla == "s"){
+                let divtecla = document.getElementById('key');
+                divtecla.style.backgroundColor = 'orange'
+            }
+            if(tecla == "d"){
+                let divtecla = document.getElementById('key');
+                divtecla.style.backgroundColor = 'skyblue'
+            }
+        }
+    
+      addEventListener("keydown",color_tecla)
+
+    // PUNTO 3.5
+
+      function agregardiv(event){
+
+        let tecla = event.key;
+        if(tecla == "q"){
+            let sel_divcreado = document.getElementById("div_creado");
+            
+            divcreado = document.createElement("div")
+            divcreado.style.width = '200px'
+            divcreado.style.height = '200px'
+            divcreado.style.backgroundColor = 'purple'
+
+            sel_divcreado.appendChild(divcreado)
+        } 
+
+        if(tecla == "w"){
+            let sel_divcreado = document.getElementById("div_creado");
+
+            divcreado = document.createElement("div")
+            divcreado.style.width = '200px'
+            divcreado.style.height = '200px'
+            divcreado.style.backgroundColor = 'lightgray'
+            
+            sel_divcreado.appendChild(divcreado)
+            
+        }
+
+        if(tecla == "e"){
+            let sel_divcreado = document.getElementById("div_creado");
+
+            divcreado = document.createElement("div")
+            divcreado.style.width = '200px'
+            divcreado.style.height = '200px'
+            divcreado.style.backgroundColor = 'browne'
+            
+            sel_divcreado.appendChild(divcreado)
+            
+        }
+        
+      }
+
+      addEventListener("keydown",agregardiv)
+
+    </script>
+</body>
+</html>
